@@ -10,20 +10,10 @@
   <button @click="increaseCapacity()">Increase capacity</button>
 </template>
 <script>
-import { ref, computed } from "vue";
+import useEventSpace from "@/use/event-space";
 export default {
   setup() {
-    const capacity = ref(3);
-    const participants = ref(["Spongebob", "Mr.Crabbs", "Squidward"]);
-
-    const spacesLeft = computed(
-      () => capacity.value - participants.value.length
-    );
-
-    function increaseCapacity() {
-      capacity.value++;
-    }
-    return { capacity, participants, spacesLeft, increaseCapacity };
+    return useEventSpace();
   },
 };
 </script>
