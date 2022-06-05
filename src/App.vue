@@ -10,20 +10,19 @@
   <button @click="increaseCapacity()">Increase capacity</button>
 </template>
 <script>
-import { ref, computed } from "vue";
+import { computed, reactive, toRefs } from "vue";
 export default {
   setup() {
-    const capacity = ref(3);
-    const participants = ref(["Spongebob", "Mr.Crabbs", "Squidward"]);
-
-    const spacesLeft = computed(
-      () => capacity.value - participants.value.length
-    );
+    const event = reactive({
+      capacity: 3,
+      participants: ["Spongebob", "Mr. Crabbs", "Squidward"],
+      spacesLeft: computed(() => event.capacity - event.participants.length),
+    });
 
     function increaseCapacity() {
-      capacity.value++;
+      event.capacity++;
     }
-    return { capacity, participants, spacesLeft, increaseCapacity };
+    return { increaseCapacity, ...toRefs(event) };
   },
 };
 </script>
