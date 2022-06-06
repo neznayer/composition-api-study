@@ -13,7 +13,14 @@
 import useEventSpace from "@/use/event-space";
 export default {
   setup() {
-    return useEventSpace();
+    const { capacity, participants, spacesLeft, increaseCapacity } =
+      useEventSpace();
+    return {
+      capacity,
+      participants,
+      spacesLeft,
+      increaseCapacity,
+    };
   },
 };
 </script>
