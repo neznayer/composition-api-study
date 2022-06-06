@@ -5,3 +5,9 @@ export async function getAnimalCount(searchInput) {
   const data = await response.json();
   return data.length;
 }
+
+export async function getAnimals() {
+  const response = await fetch(`${baseURL}/animals`);
+  const data = await response.json();
+  return data;
+}
