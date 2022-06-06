@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { getAnimalCount } from "@/api/animals";
 
 export default {
@@ -15,8 +15,9 @@ export default {
     const searchInput = ref("");
     const results = ref(0);
 
-    getAnimalCount(searchInput.value).then((resp) => {
-      results.value = resp;
+    watch(searchInput, async () => {
+      const result = await getAnimalCount(searchInput.value);
+      results.value = result;
     });
 
     return { searchInput, results };
