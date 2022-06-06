@@ -7,7 +7,12 @@ export async function getAnimalCount(searchInput) {
 }
 
 export async function getAnimals() {
-  const response = await fetch(`${baseURL}/animals`);
-  const data = await response.json();
-  return data;
+  try {
+    const response = await fetch(`${baseURL}/animals`);
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    throw new Error("network error");
+  }
 }

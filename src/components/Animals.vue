@@ -14,7 +14,6 @@ import { getAnimals } from "@/api/animals";
 export default {
   async setup() {
     const animals = await getAnimals();
-
     return { animals };
   },
 };
