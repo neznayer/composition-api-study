@@ -1,0 +1,16 @@
+{
+  "animals": [
+    { "id": 1, "title": "Kittens", "author": "anton" },
+    { "id": 2, "title": "Kitties", "author": "typicode" },
+    { "id": 3, "title": "Kites", "author": "ben" },
+    { "id": 4, "title": "Puppies", "author": "ben" },
+    { "id": 5, "title": "Random animal", "author": "ben" },
+    { "id": 6, "title": "Giraffe", "author": "ben" },
+    { "id": 7, "title": "Hippopotamus", "author": "ben" },
+    { "id": 8, "title": "Elephants", "author": "ben" },
+    { "id": 9, "title": "Dog", "author": "ben" },
+    { "id": 10, "title": "Cat", "author": "ben" },
+    { "id": 11, "title": "Bobcat", "author": "ben" },
+    { "id": 12, "title": "Dingo Dog", "author": "ben" }
+  ]
+}
